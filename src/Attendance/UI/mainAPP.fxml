@@ -1,0 +1,350 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.shape.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.control.cell.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.collections.*?>
+<?import javafx.scene.control.cell.*?>
+<?import Attendance.models.*?>
+<?import Attendance.UI.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="660.0" prefWidth="1260.0" styleClass="img_bg" stylesheets="@MainAppCss.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Attendance.operation.AttendanceOperation">
+   <children>
+      <TabPane prefHeight="660.0" prefWidth="1260.0" tabClosingPolicy="UNAVAILABLE" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+        <tabs>
+          <Tab text="HOME">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="660.0" prefWidth="1260.0">
+                     <children>
+                        <VBox prefHeight="660.0" prefWidth="1260.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                           <children>
+                              <SplitPane dividerPositions="0.34457236842105265" prefHeight="658.0" prefWidth="1260.0">
+                                <items>
+                                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+                                       <children>
+                                          <TableView fx:id="studentsTable" prefHeight="591.0" prefWidth="431.0" styleClass="tableview" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                            <columns>
+                                              <TableColumn fx:id="idColumn" prefWidth="50.0" text="S/N">
+                                                  <cellValueFactory> 
+                                                      <PropertyValueFactory property="ID" /> 
+                                                  </cellValueFactory>
+                                              </TableColumn>
+                                              <TableColumn fx:id="nameColumn" prefWidth="199.0" text="NAMES">
+                                                   <cellValueFactory> 
+                                                      <PropertyValueFactory property="fullName" /> 
+                                                  </cellValueFactory>
+                                              </TableColumn>
+                                                <TableColumn fx:id="matricColumn" prefWidth="172.0" text="MATRIC NUMBER"> 
+                                                    <cellValueFactory> 
+                                                      <PropertyValueFactory property="matricNo" /> 
+                                                  </cellValueFactory>
+                                                </TableColumn>
+                                            </columns>
+                                          </TableView>
+                                       </children>
+                                    </AnchorPane>
+                                    <SplitPane dividerPositions="0.8121951219512196" prefHeight="591.0" prefWidth="573.0">
+                                      <items>
+                                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="550.0" prefWidth="653.0">
+                                             <children>
+                                                <TableView fx:id="attendanceTable" editable="true" prefHeight="550.0" prefWidth="845.0" styleClass="tableview" tableMenuButtonVisible="true" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                                  <columns>
+                                                      <TableColumn prefWidth="28.0" text="1">
+                                                          <cellValueFactory>
+                                                          <PropertyValueFactory property="check" />
+                                                          </cellValueFactory>
+                                                      </TableColumn>
+                                                      <TableColumn prefWidth="33.0" text="2"> 
+                                                          <cellValueFactory>
+                                                          <PropertyValueFactory property="check1" />
+                                                          </cellValueFactory>
+                                                       </TableColumn>
+                                                      <TableColumn prefWidth="26.0" text="3"> 
+                                                      <cellValueFactory>
+                                                      <PropertyValueFactory property="check2" />
+                                                      </cellValueFactory>
+                                                      </TableColumn>
+                                                      <TableColumn prefWidth="25.0" text="4">
+                                                        <cellValueFactory>
+                                                       <PropertyValueFactory property="check3" />
+                                                        </cellValueFactory>  
+                                                      </TableColumn>
+                                                      <TableColumn prefWidth="24.0" text="5">
+                                                        <cellValueFactory>
+                                                            <PropertyValueFactory property="check4" />
+                                                        </cellValueFactory>
+                                                      </TableColumn>
+                                                      <TableColumn prefWidth="23.0" text="6">
+                                                         <cellValueFactory>
+                                                             <PropertyValueFactory property="check5" />
+                                                         </cellValueFactory>
+                                                      </TableColumn>
+                                                      <TableColumn prefWidth="27.0" text="7"> 
+                                                          <cellValueFactory>
+                                                              <PropertyValueFactory property="check6" />
+                                                          </cellValueFactory>
+                                                       </TableColumn>
+                                                      <TableColumn prefWidth="24.0" text="8"> 
+                                                          <cellValueFactory>
+                                                              <PropertyValueFactory property="check7" />
+                                                          </cellValueFactory>
+                                                      </TableColumn>
+                                                      <TableColumn prefWidth="28.0" text="9">
+                                                          <cellValueFactory>
+                                                              <PropertyValueFactory property="check8" />
+                                                          </cellValueFactory>
+                                                      </TableColumn>
+                                                      <TableColumn prefWidth="30.0" text="10"> 
+                                                          <cellValueFactory>
+                                                            <PropertyValueFactory property="check9" />
+                                                          </cellValueFactory>
+                                                      </TableColumn>
+                                                      <TableColumn prefWidth="28.0" text="11">
+                                                          <cellValueFactory>
+                                                              <PropertyValueFactory property="check10" />
+                                                          </cellValueFactory>
+                                                      </TableColumn>
+                                                      <TableColumn prefWidth="31.0" text="12">
+                                                          <cellValueFactory>
+                                                              <PropertyValueFactory property="check11" />
+                                                          </cellValueFactory>
+                                                      </TableColumn>
+                                                      <TableColumn prefWidth="30.0" text="13">
+                                                          <cellValueFactory>
+                                                              <PropertyValueFactory property="check12" />
+                                                          </cellValueFactory>
+                                                      </TableColumn>
+                                                      <TableColumn prefWidth="29.0" text="14">
+                                                          <cellValueFactory>
+                                                              <PropertyValueFactory property="check13" />
+                                                          </cellValueFactory>
+                                                      </TableColumn>
+                                                      <TableColumn prefWidth="31.0" text="15">
+                                                        <cellValueFactory>
+                                                          <PropertyValueFactory property="check14" />
+                                                        </cellValueFactory>
+                                                      </TableColumn>
+                                                      <TableColumn prefWidth="30.0" text="16"> 
+                                                          <cellValueFactory>
+                                                              <PropertyValueFactory property="check15" />
+                                                          </cellValueFactory>
+                                                      </TableColumn>
+                                                      <TableColumn prefWidth="26.0" text="17"> 
+                                                          <cellValueFactory>
+                                                              <PropertyValueFactory property="check16" />
+                                                          </cellValueFactory>
+                                                      </TableColumn>
+                                                      <TableColumn prefWidth="34.0" text="18"> 
+                                                          <cellValueFactory>
+                                                              <PropertyValueFactory property="check17" />
+                                                          </cellValueFactory>  
+                                                      </TableColumn>
+                                                      <TableColumn prefWidth="29.0" text="19"> 
+                                                          <cellValueFactory>
+                                                              <PropertyValueFactory property="check18" />
+                                                          </cellValueFactory>
+                                                      </TableColumn>
+                                                      <TableColumn prefWidth="36.0" text="20">
+                                                          <cellValueFactory>
+                                                              <PropertyValueFactory property="check19" />
+                                                          </cellValueFactory>
+                                                      </TableColumn>
+                                                      <TableColumn prefWidth="36.0" text="21">
+                                                          <cellValueFactory>
+                                                              <PropertyValueFactory property="check20" />
+                                                          </cellValueFactory>
+                                                      </TableColumn>
+                                                      <TableColumn prefWidth="30.0" text="22"> 
+                                                          <cellValueFactory>
+                                                              <PropertyValueFactory property="check21" />
+                                                          </cellValueFactory>
+                                                      </TableColumn>
+                                                      <TableColumn prefWidth="36.0" text="23"> 
+                                                          <cellValueFactory>
+                                                              <PropertyValueFactory property="check22" />
+                                                          </cellValueFactory>
+                                                      </TableColumn>
+                                                      <TableColumn minWidth="36.0" prefWidth="36.0" text="24"> 
+                                                          <cellValueFactory>
+                                                             <PropertyValueFactory property="check23" />
+                                                          </cellValueFactory>
+                                                      </TableColumn>
+                                                      <TableColumn prefWidth="36.0" text="25">
+                                                          <cellValueFactory>
+                                                             <PropertyValueFactory property="check24" />
+                                                          </cellValueFactory>
+                                                      </TableColumn>
+                                                      <TableColumn prefWidth="36.0" text="26">
+                                                          <cellValueFactory>
+                                                             <PropertyValueFactory property="check25" />
+                                                          </cellValueFactory>
+                                                      </TableColumn>  
+                                                      <TableColumn prefWidth="36.0" text="27">
+                                                          <cellValueFactory>
+                                                             <PropertyValueFactory property="check26" />
+                                                          </cellValueFactory>
+                                                      </TableColumn>
+                                                      <TableColumn prefWidth="36.0" text="28">
+                                                           <cellValueFactory>
+                                                             <PropertyValueFactory property="check27" />
+                                                          </cellValueFactory>
+                                                      </TableColumn>
+                                                      <TableColumn prefWidth="36.0" text="29">
+                                                           <cellValueFactory>
+                                                             <PropertyValueFactory property="check28" />
+                                                          </cellValueFactory>
+                                                      </TableColumn>
+                                                      <TableColumn prefWidth="36.0" text="30">
+                                                          <cellValueFactory>
+                                                             <PropertyValueFactory property="check29" />
+                                                          </cellValueFactory>
+                                                      </TableColumn>
+                                                      <TableColumn prefWidth="36.0" text="31">
+                                                          <cellValueFactory>
+                                                             <PropertyValueFactory property="check30" />
+                                                          </cellValueFactory>
+                                                      </TableColumn>
+                                                      <TableColumn prefWidth="36.0" text="32">
+                                                          <cellValueFactory>
+                                                             <PropertyValueFactory property="check31" />
+                                                          </cellValueFactory>  
+                                                      </TableColumn>
+
+
+
+                                                  </columns>
+                                                </TableView>
+                                             </children>
+                                          </AnchorPane>
+                                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="591.0" prefWidth="136.0">
+                                             <children>
+                                                <TableView fx:id="attendanceResultTable" layoutX="-4.0" prefHeight="550.0" prefWidth="158.0" styleClass="tableview" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="-4.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                                  <columns>
+                                                    <TableColumn fx:id="daysPresentColumn" prefWidth="53.0" text="DP">
+                                                    <cellValueFactory> 
+                                                      <PropertyValueFactory property="DP" /> 
+                                                  </cellValueFactory>
+                                                    </TableColumn>
+                                                    <TableColumn fx:id="daysAbsentColumn" prefWidth="32.0" text="DA">
+                                                    <cellValueFactory> 
+                                                      <PropertyValueFactory property="DA" /> 
+                                                  </cellValueFactory>
+                                                    </TableColumn>
+                                                      <TableColumn fx:id="percentageAttendance" prefWidth="69.0" text="\%">
+                                                      <cellValueFactory> 
+                                                      <PropertyValueFactory property="percent" /> 
+                                                  </cellValueFactory>
+                                                    </TableColumn>
+                                                  </columns>
+                                                </TableView>
+                                             </children></AnchorPane>
+                                      </items>
+                                    </SplitPane>
+                                </items>
+                              </SplitPane>
+                              <HBox prefHeight="100.0" prefWidth="200.0" styleClass="mybox">
+                                 <children>
+                                    <GridPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="41.0" prefWidth="582.0">
+                                      <columnConstraints>
+                                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="257.0" minWidth="10.0" prefWidth="134.0" />
+                                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="326.0" minWidth="8.0" prefWidth="133.0" />
+                                          <ColumnConstraints hgrow="SOMETIMES" maxWidth="360.0" minWidth="10.0" prefWidth="127.0" />
+                                          <ColumnConstraints hgrow="SOMETIMES" maxWidth="360.0" minWidth="10.0" prefWidth="182.0" />
+                                      </columnConstraints>
+                                      <rowConstraints>
+                                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                      </rowConstraints>
+                                       <children>
+                                          <Button mnemonicParsing="false" onAction="#handleAddNewStudent" prefHeight="26.0" prefWidth="129.0" text="Add New Student" />
+                                          <Label fx:id="courseCodeLabel" alignment="CENTER" prefHeight="39.0" prefWidth="183.0" text="CMP 213" textAlignment="JUSTIFY" GridPane.columnIndex="3">
+                                             <font>
+                                                <Font name="System Bold Italic" size="30.0" />
+                                             </font>
+                                          </Label>
+                                          <Button mnemonicParsing="false" onAction="#handleDeleteStudent" prefHeight="26.0" prefWidth="129.0" text="Delete Student" GridPane.columnIndex="1" />
+                                          <Button mnemonicParsing="false" onAction="#handleEditStudent" prefHeight="26.0" prefWidth="129.0" text="Edit Student" GridPane.columnIndex="2" />
+                                       </children>
+                                    </GridPane>
+                                    <TextFlow prefHeight="73.0" prefWidth="438.0">
+                                       <children>
+                                          <Label alignment="CENTER" prefHeight="32.0" prefWidth="433.0" text="[DP] = no of days Present | [DA] = no of days Absent">
+                                             <font>
+                                                <Font name="System Bold" size="14.0" />
+                                             </font></Label>
+                                          <Label alignment="CENTER" prefHeight="30.0" prefWidth="346.0" text="[%] = Attendance Percentage" textAlignment="JUSTIFY">
+                                             <font>
+                                                <Font name="System Bold" size="15.0" />
+                                             </font></Label>
+                                       </children>
+                                    </TextFlow>
+                                    <Pane prefHeight="73.0" prefWidth="31.0" />
+                                    <Button mnemonicParsing="false" onAction="#handleCalculateAll" prefHeight="25.0" prefWidth="100.0" text="Calculate All">
+                                       <HBox.margin>
+                                          <Insets bottom="25.0" top="25.0" />
+                                       </HBox.margin>
+                                    </Button>
+                                    <Pane prefHeight="75.0" prefWidth="1.0" />
+                                    <Hyperlink alignment="CENTER" contentDisplay="CENTER" onAction="#handleLogOut" prefHeight="71.0" prefWidth="62.0" text="Log Out" textAlignment="CENTER" />
+                                 </children></HBox>
+                           </children>
+                        </VBox>
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+            <Tab text="EDIT DETAILS">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="660.0" prefWidth="1260.0">
+                     <children>
+                        <VBox prefHeight="660.0" prefWidth="1260.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                           <children>
+                              <Pane prefHeight="49.0" prefWidth="1260.0" />
+                              <GridPane prefHeight="362.0" prefWidth="1238.0">
+                                <columnConstraints>
+                                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="609.0" minWidth="10.0" prefWidth="481.0" />
+                                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="1174.0" minWidth="10.0" prefWidth="757.0" />
+                                </columnConstraints>
+                                <rowConstraints>
+                                    <RowConstraints maxHeight="51.0" minHeight="0.0" prefHeight="0.0" vgrow="SOMETIMES" />
+                                  <RowConstraints maxHeight="60.0" minHeight="9.0" prefHeight="60.0" vgrow="SOMETIMES" />
+                                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                  <RowConstraints maxHeight="38.0" minHeight="10.0" prefHeight="37.0" vgrow="SOMETIMES" />
+                                    <RowConstraints maxHeight="40.0" minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints maxHeight="48.0" minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints maxHeight="47.0" minHeight="10.0" prefHeight="41.0" vgrow="SOMETIMES" />
+                                    <RowConstraints maxHeight="14.0" minHeight="6.0" prefHeight="12.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                </rowConstraints>
+                                 <children>
+                                    <Label alignment="CENTER" prefHeight="58.0" prefWidth="258.0" text="PERSONAL DETAILS" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                                       <font>
+                                          <Font name="System Bold" size="22.0" />
+                                       </font>
+                                    </Label>
+                                    <Label prefHeight="26.0" prefWidth="260.0" GridPane.rowIndex="7" />
+                                    <TextField fx:id="firstNameText" maxWidth="-Infinity" prefHeight="16.0" prefWidth="256.0" promptText="FirstName" styleClass="input_wrap" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                                    <TextField fx:id="lastNametext" maxWidth="-Infinity" prefHeight="16.0" prefWidth="256.0" promptText="LastName" styleClass="input_wrap" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+                                    <TextField fx:id="emailText" maxWidth="-Infinity" prefHeight="16.0" prefWidth="256.0" promptText="Email" styleClass="input_wrap" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+                                    <Button mnemonicParsing="false" onAction="#handleSaveDetails" prefHeight="25.0" prefWidth="102.0" text="Save Details" GridPane.columnIndex="1" GridPane.rowIndex="6">
+                                       <GridPane.margin>
+                                          <Insets left="70.0" />
+                                       </GridPane.margin>
+                                    </Button>
+                                    <TextField fx:id="titleText" maxWidth="-Infinity" prefHeight="16.0" prefWidth="256.0" promptText="TItle" styleClass="input_wrap" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                                    <Label fx:id="detailsSavedLabel" alignment="CENTER" prefHeight="25.0" prefWidth="253.0" GridPane.columnIndex="1" GridPane.rowIndex="9" />
+                                 </children>
+                              </GridPane>
+                           </children>
+                        </VBox>
+                     </children></AnchorPane>
+              </content>
+            </Tab>
+        </tabs>
+      </TabPane>
+   </children>
+</AnchorPane>

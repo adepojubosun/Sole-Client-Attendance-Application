@@ -1,0 +1,101 @@
+
+.img_bg
+{
+    -fx-background-color: #177877;
+    -fx-background-image: url("1470B.jpg");
+    -fx-background-position: center bottom;
+    -fx-background-repeat: no-repeat;
+    -fx-background-size: 100%;
+    -fx-background-radius: 5;
+    -fx-border-radius: 5;
+}
+
+
+
+.input_wrap
+{
+    -fx-background-color: whitesmoke;
+    -fx-spacing: 0;    
+    -fx-border-color: #dddddd;
+    -fx-border-radius: 3;
+    -fx-background-radius: 3;
+    -fx-font-size: 16px;
+    -fx-font-family: "Segoe WP";
+}
+
+.img.password { -fx-image: url("icon_login_password.png"); }
+
+ .button 
+{
+    -fx-border-radius: 5;
+    -fx-font-family: "Source Sans Pro";
+    -fx-background-color : #e8eaee91;
+    -fx-font-size : 12 ;
+    -fx-text-style: bold;
+}
+
+.button:hover{
+   -fx-font-size : 12 ;
+    -fx-text-style: bold;
+    -fx-background-color : limegreen;
+    -fx-border-radius: 5;
+    -fx-font-family: "Source Sans Pro";
+}
+
+/*.button:pressed, .button:default:hover:pressed{
+    -fx-background-color : #33ff33;
+    -fx-text-fill:#177877;
+}
+
+.button:disabled, .button:default:disabled{
+    -fx-background-color : #33ff33;
+    -fx-text-fill:#177877;
+}*/
+
+.button:default:hover{
+     -fx-font-size : 12 ;
+    -fx-text-style: bold;
+    -fx-background-color : limegreen;
+    -fx-border-radius: 5;
+    -fx-font-family: "Source Sans Pro";
+}
+
+
+
+
+
+.login
+{
+    -fx-font-family: "Segoe WP";
+    -fx-border-radius: 0;
+    -fx-background-radius: 0;
+}
+
+.input_wrap .text-field.regular
+{    
+    -fx-border-radius: 0 3 3 0;
+    -fx-border-width: 0 0 0 0.5;    
+    -fx-background-radius: 0 3 3 0;    
+}
+
+.last
+{
+    -fx-pref-height: 40;
+    -fx-border-color: #dddddd;
+    -fx-font-size: 16px;
+    -fx-font-family: "Segoe WP";
+    -fx-background-color: #FDFDFD;
+    -fx-prompt-text-fill: #dddddd;
+    -fx-border-radius: 0;
+    -fx-background-radius: 0;
+    -fx-border-width: 0 0.5 0 0.5;    
+}
+
+.first{
+    -fx-border-color: #dddddd;
+    -fx-font-size: 16px;
+    -fx-font-family: "Segoe WP";
+    -fx-background-color: #FDFDFD;
+    -fx-prompt-text-fill: #dddddd;
+}
+

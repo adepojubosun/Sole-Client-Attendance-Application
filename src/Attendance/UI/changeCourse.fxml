@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="439.0" prefWidth="617.0" styleClass="img_bg" stylesheets="@logincss.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Attendance.operation.ChangeCourseOperation">
+   <children>
+      <VBox layoutX="77.0" layoutY="51.0" prefHeight="368.0" prefWidth="462.0" AnchorPane.bottomAnchor="20.0" AnchorPane.leftAnchor="77.0" AnchorPane.rightAnchor="78.0" AnchorPane.topAnchor="51.0">
+         <children>
+            <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="69.0" prefWidth="493.0" styleClass="login" text="Add New Course" textAlignment="CENTER" textFill="#444f83">
+               <font>
+                  <Font name="System Bold" size="24.0" />
+               </font>
+               <VBox.margin>
+                  <Insets />
+               </VBox.margin>
+            </Label>
+            <GridPane prefHeight="125.0" prefWidth="331.0" vgap="2.0">
+              <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="213.0" minWidth="10.0" prefWidth="70.0" />
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="379.0" minWidth="10.0" prefWidth="379.0" />
+              </columnConstraints>
+              <rowConstraints>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+              </rowConstraints>
+               <children>
+                  <TextField fx:id="courseTitleText" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="35.0" prefWidth="280.0" promptText="Course Title" GridPane.columnIndex="1">
+                     <styleClass>
+                        <String fx:value="input_wrap" />
+                        <String fx:value="first" />
+                     </styleClass></TextField>
+                  <TextField fx:id="courseCodeText" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="35.0" prefWidth="280.0" promptText="Course Code" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                     <styleClass>
+                        <String fx:value="input_wrap" />
+                        <String fx:value="first" />
+                     </styleClass></TextField>
+                  <TextField fx:id="courseUnitsText" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="35.0" prefWidth="280.0" promptText="Course Units" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                     <styleClass>
+                        <String fx:value="input_wrap" />
+                        <String fx:value="first" />
+                     </styleClass></TextField>
+               </children>
+            </GridPane>
+            <Pane prefHeight="19.0" prefWidth="449.0" />
+            <GridPane prefHeight="73.0" prefWidth="462.0">
+               <columnConstraints>
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="165.0" minWidth="10.0" prefWidth="92.0" />
+                  <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" maxWidth="276.0" minWidth="10.0" prefWidth="238.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="191.0" minWidth="10.0" prefWidth="100.0" />
+               </columnConstraints>
+               <rowConstraints>
+                  <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+               </rowConstraints>
+               <children>
+                  <Button fx:id="addCourse" contentDisplay="CENTER" mnemonicParsing="false" onAction="#handleAddCourse" styleClass="btn_go" text="Add Course" GridPane.columnIndex="1">
+                     <VBox.margin>
+                        <Insets />
+                     </VBox.margin>
+                  </Button>
+                  <Button mnemonicParsing="false" onAction="#handleBack" styleClass="btn_go" text="Back" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+               </children>
+            </GridPane>
+            <Pane prefHeight="16.0" prefWidth="474.0" />
+            <Label fx:id="addNewCourseLabel" alignment="CENTER" contentDisplay="CENTER" prefHeight="41.0" prefWidth="473.0" text="COURSE ADDED" textAlignment="JUSTIFY" textFill="#ffa305">
+               <font>
+                  <Font size="20.0" />
+               </font></Label>
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>

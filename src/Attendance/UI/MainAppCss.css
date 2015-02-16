@@ -1,0 +1,179 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : Feb 7, 2015, 8:27:09 PM
+    Author     : bosun
+*/
+
+
+.mybox{
+    -fx-background-color: #177877;
+    
+    
+}
+
+.input_wrap
+{
+    -fx-background-color: whitesmoke;
+    -fx-spacing: 0;    
+    -fx-border-color: #dddddd;
+    -fx-border-radius: 3;
+    -fx-background-radius: 3;
+    -fx-font-size: 12px;
+    -fx-font-family: "Source Sans Pro";
+}
+
+
+ .button 
+{
+    -fx-border-radius: 5;
+    -fx-font-family: "Source Sans Pro";
+    -fx-background-color : #e8eaee91;
+    -fx-font-size : 12 ;
+    -fx-text-style: bold;
+}
+
+.button:hover{
+   -fx-font-size : 12 ;
+    -fx-text-style: bold;
+    -fx-background-color : limegreen;
+    -fx-border-radius: 5;
+    -fx-font-family: "Source Sans Pro";
+}
+
+/*.button:pressed, .button:default:hover:pressed{
+    -fx-background-color : #33ff33;
+    -fx-text-fill:#177877;
+}
+
+.button:disabled, .button:default:disabled{
+    -fx-background-color : #33ff33;
+    -fx-text-fill:#177877;
+}*/
+
+.button:default:hover{
+     -fx-font-size : 12 ;
+    -fx-text-style: bold;
+    -fx-background-color : limegreen;
+    -fx-border-radius: 5;
+    -fx-font-family: "Source Sans Pro";
+}
+
+
+.hyperlink
+{
+    -fx-font-family: "Source Sans Pro";
+    -fx-text-style: bold;
+    -fx-text-fill: white;
+}
+
+.hyperlink:hover{
+   -fx-font-size : 12 ;
+    -fx-text-style: bold;
+    -fx-background-color : limegreen;
+    -fx-font-family: "Source Sans Pro";
+}
+
+.hyperlink:default:hover{
+     -fx-font-size : 12 ;
+    -fx-text-style: bold;
+    -fx-background-color : limegreen;
+    -fx-font-family: "Source Sans Pro";
+}
+
+.tab-pane:top, tab-pane:bottom
+{
+    -fx-background-color: transparent;
+    -fx-padding: 20 20 20 20;
+}
+
+.tab-pane:bottom .tab-header-area,
+.tab-pane:top .tab-header-area
+{
+    -fx-alignment: center;
+    -fx-padding: 0;
+}
+
+.tab-pane:bottom .tab-header-area .tab-header-background,
+.tab-pane:top .tab-header-area .tab-header-background
+{
+    -fx-background-color: transparent;
+    -fx-background-insets: 0;
+}
+
+.tab-pane:bottom .tab-header-area .headers-region,
+.tab-pane:top .tab-header-area .headers-region
+{
+    -fx-background-color: transparent;
+    -fx-background-radius: 5;
+    -fx-translate-x: 150;
+}
+
+.tab-pane:bottom .tab-header-area .headers-region .tab:bottom,
+.tab-pane:top .tab-header-area .headers-region .tab:top
+{
+    -fx-border-radius: 5 5 0 0;
+    -fx-background-radius: 5 5 0 0;
+    -fx-background-repeat: repeat;
+    -fx-border-color: #dddddd;
+    -fx-border-width: 0.5 0.5 0 0.5;
+    -fx-background-insets: 0;
+    -fx-padding: 5 15 5 15;
+}
+
+.tab-pane:bottom .tab-header-area .headers-region .tab:selected:bottom,
+.tab-pane:top .tab-header-area .headers-region .tab:selected:top
+{    
+    -fx-background-color: #177877;
+    -fx-border-color: #20ABA9;
+}
+
+.tab-pane:bottom .tab-header-area .headers-region .tab:bottom .tab-container .tab-label .text,
+.tab-pane:top .tab-header-area .headers-region .tab:top .tab-container .tab-label .text
+{
+    -fx-font-family: "Segoe WP";
+    -fx-font-size: 12px;    
+}
+
+.tab-pane:bottom .tab-header-area .headers-region .tab:selected:bottom .tab-container .tab-label .text,
+.tab-pane:top .tab-header-area .headers-region .tab:selected:top .tab-container .tab-label .text
+{
+    -fx-fill: #ffffff;
+}
+
+.tab-pane:bottom .tab-header-area .headers-region .tab:selected:bottom .tab-container .focus-indicator,
+.tab-pane:bottom .tab-header-area .headers-region .tab:selected:top .tab-container .focus-indicator
+{
+    -fx-background-color: transparent;
+    -fx-border-color: transparent;
+    -fx-border-width: 0;
+    -fx-visibility: false;
+}
+
+.tab-pane .tab-content-area
+{
+    -fx-background-color: #ffffff;
+    -fx-border-color: #dddddd;
+    -fx-background-radius: 5;
+    -fx-border-radius: 5;
+}
+
+.tab_content
+{
+    -fx-background-radius: 5;
+    -fx-border-radius: 5;
+    -fx-background-repeat: repeat;
+    -fx-padding: 20 40 20 40;
+}
+
+.tab-pane:bottom .tab-header-area .headers-region .tab:hover:bottom,
+.tab-pane:top .tab-header-area .headers-region .tab:hover:top
+{    
+    -fx-background-color: limegreen;
+}
+
+
+

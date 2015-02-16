@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="327.0" prefWidth="321.0" style="-fx-background-color: #177877; -fx-border-radius: 5;" stylesheets="@MainAppCss.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Attendance.operation.EditStudentDialogOperation">
+   <children>
+      <VBox layoutY="12.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <GridPane layoutY="12.0" prefHeight="227.0" prefWidth="344.0">
+              <columnConstraints>
+                <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+              </columnConstraints>
+              <rowConstraints>
+                <RowConstraints maxHeight="79.0" minHeight="10.0" prefHeight="65.0" vgrow="SOMETIMES" />
+                <RowConstraints maxHeight="185.0" minHeight="10.0" prefHeight="83.0" valignment="CENTER" vgrow="SOMETIMES" />
+                <RowConstraints maxHeight="175.0" minHeight="10.0" prefHeight="92.0" vgrow="SOMETIMES" />
+              </rowConstraints>
+               <children>
+                  <Label alignment="CENTER" prefHeight="62.0" prefWidth="344.0" text="STUDENT" textAlignment="CENTER">
+                     <font>
+                        <Font name="System Bold" size="19.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="nameText" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="31.0" prefWidth="216.0" promptText="Fullname" stylesheets="@logincss.css" GridPane.rowIndex="1">
+                     <styleClass>
+                        <String fx:value="first" />
+                        <String fx:value="input_wrap" />
+                     </styleClass></TextField>
+                  <TextField fx:id="matricNumberText" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="31.0" prefWidth="216.0" promptText="Matric Number" styleClass="first" stylesheets="@logincss.css" GridPane.rowIndex="2" />
+               </children>
+            </GridPane>
+            <Pane prefHeight="25.0" prefWidth="344.0" />
+            <GridPane prefHeight="64.0" prefWidth="321.0">
+              <columnConstraints>
+                  <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" maxWidth="213.0" minWidth="10.0" prefWidth="165.0" />
+                <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" maxWidth="213.0" minWidth="10.0" prefWidth="74.0" />
+                <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" maxWidth="149.0" minWidth="10.0" prefWidth="82.0" />
+              </columnConstraints>
+              <rowConstraints>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+              </rowConstraints>
+               <children>
+                  <Button mnemonicParsing="false" onAction="#handleSave" prefHeight="29.0" prefWidth="71.0" text="Save" GridPane.columnIndex="1" />
+                  <Button mnemonicParsing="false" onAction="#handleCancel" prefHeight="29.0" prefWidth="71.0" text="Cancel" GridPane.columnIndex="2" />
+                  <Label fx:id="errorLabel" alignment="CENTER" prefHeight="57.0" prefWidth="152.0" text="ERROR" textFill="#140101" />
+               </children>
+            </GridPane>
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>
